@@ -1,0 +1,19 @@
+
+<script src="/assets/js/donate.js"></script>
+<script src="/assets/js/create_new_donate.js"></script>
+
+<section class="section container">
+    {{#each donations}}
+        <div class = 'container_donations' onclick="">
+            <center>
+                <p class="title is-4">Responsável : {{this.responsible}}</p>
+                <p class="subtitle is-6">Causa : {{this.sector}}</p>
+                <input type="hidden" class="input level-item" value="{{this.id}}" />
+                <a class="button is-primary level-item" onclick="donate({{this.id}})">Doar</a>
+            </center>
+        </div>     
+         <br />
+    {{/each}}
+    <center><p class="add_more_donations" onclick="create_new_donate()">+</p></center>
+</section>
+

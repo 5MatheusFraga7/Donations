@@ -1,0 +1,33 @@
+<script src="/assets/js/donate_for_user.js"></script>
+
+<section class="section container">
+    <div class="level">
+        <div class="level-left">
+            <h1 class="title level-item">Doar</h1>
+        </div>
+        <div class="level-right">
+            <a href="/" class="btn btn-danger">Voltar</a>
+        </div>
+    </div>
+    {{#each donations}}
+        <div class = 'container_donations' onclick="">
+            <center>
+                <p class="title is-4">Responsável : {{this.responsible}}</p>
+                <p class="subtitle is-6">Causa : {{this.sector}}</p>
+                <p class="subtitle is-6">Valor obtido : {{this.values}}</p>
+
+                <input type="hidden" id = 'obtained_value' class="input level-item" value="{{this.values}}" />
+                <input type="hidden" id = 'input_donate_user' class="input level-item" value="{{this.id}}" />
+            </center>
+        </div>     
+         <br />
+    {{/each}}
+
+    <center>
+        <div class="container_donation_for_user">
+           <center><input type="number" id="input_donate_for_user" value=""/></center> 
+            <a class="button is-primary level-item" id="btn_donate_for_user" onclick="donate_for_user()">Doar</a>
+        </div> 
+    </center>
+
+</section>
