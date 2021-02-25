@@ -4,15 +4,15 @@ module.exports = async function (request, response) {
     const { q } = request.query;
 
     if (!q) {
-        return response.render('search');
+        return response.render('home');
     }
 
-    const person = await connection('person')
-        .where('firstName', 'like', `%${q}%`)
-        .orWhere('lastName', 'like', `%${q}%`)
-        .orderBy('firstName', 'asc')
-        .orderBy('lastName', 'asc')
+    const donations = await connection('donations')
+        .where('responsible', 'like', `%${q}%`)
+        .orWhere('sector', 'like', `%${q}%`)
+        .orderBy('responsible', 'asc')
+        .orderBy('sector', 'asc')
         .select('*');
 
-    return response.render('search', { search: q, person })
+    return response.render('home', { search: q, donations })
 }
