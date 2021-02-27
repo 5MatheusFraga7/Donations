@@ -16,13 +16,21 @@
         <br />
         <center>
             <div class="container_donation_for_user">
-                <h1>Responsável:</h1>
-                <input id = 'new_reponsible' type="text" value = ''><br>
-                <h1>Atuação:</h1>
-                <input id = 'new_action' type="text"  value = ''><br>  
-                <h1>Valor:</h1>
-                <input id = 'new_values' type="number"  value = ''><br>                               
-                <a class="button is-primary level-item" id="btn_donate_for_user" onclick="save_new_donate()">Criar</a>
+                <form action="/action_page.php">
+                    <div class="form-group">
+                        <label for="responsible">Responsável:</label>
+                        <input id = 'new_reponsible' type="text" class="form-control" placeholder="Responsável">
+                    </div>
+                    <div class="form-group">
+                        <label for="sector">Atuação:</label>
+                        <input id = 'new_action' type="text" class="form-control" placeholder="Atuação">
+                    </div>
+                    <div class="form-group">
+                        <label for="values">Valor:</label>
+                        <input id = 'new_values' type="number" class="form-control" placeholder="Valor">
+                    </div>            
+                    <a class="button is-primary level-item" id="btn_donate_for_user" onclick="save_new_donate()">Criar</a>
+                </form>              
             </div> 
         </center>           
         <br />

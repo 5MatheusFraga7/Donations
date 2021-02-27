@@ -3,33 +3,26 @@
 <script src="/assets/js/create_new_donate.js"></script>
 <script src="/assets/js/search.js"></script>
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="/">  <img src="https://image.flaticon.com/icons/png/512/940/940817.png" class="img-rounded" width="70" height="100"> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Doações
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Ação</a>
-          <a class="dropdown-item" href="#">Outra ação</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Algo mais aqui</a>
+          <a class="dropdown-item" onclick="create_new_donate()">Criar doação</a>
+          <a class="dropdown-item" href="#">Editar doação</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Desativado</a>
+        <a class="nav-link" href="#">Top doações</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -40,6 +33,29 @@
 </nav>
 
 <section class="section container">
+
+  <div class="container-fluid">
+    <h1>Olá, seja bem vindo ao Doe Fácil!</h1>
+    <p>Uma plataforma que conecta doadores de grande coração com pessoas com grande necessidade.</p>
+    <div class="row">
+      <div class="col welcome_labels" style="background-color:lavender; text-align:center; cursor: pointer;" onclick="show_top_donations()"><b>Top doações</b>
+        <div class="text_label_hidden1"  >
+          <br> Venha descobrir quais são <br> as melhores doações
+        </div>
+      </div>
+      <div class="col welcome_labels" style="background-color:rgb(171, 171, 241); text-align:center;"> <b>Criar doação</b> 
+         <div class="text_label_hidden">
+          <br> Abra seu coração e peça uma doação <br> 
+         </div>   
+      </div>
+      <div class="col welcome_labels" style="background-color:rgb(154, 154, 168); text-align:center;"> <b>Fale conosco</b> 
+        <div class="text_label_hidden3">
+          <br> Entre em contato. <br> Somos legais
+        </div>   
+      </div>
+    </div>
+  </div>
+
     {{#each donations}}
         <div class = 'container_donations' onclick="">
             <center>
@@ -51,6 +67,18 @@
         </div>     
          <br />
     {{/each}}
-    <center><p class="add_more_donations" onclick="create_new_donate()">+</p></center>
+
+    <center>
+        <h1>Criar doação <i class="fas fa-heart"></i></h1>
+        <a class="btn btn-success btn-lg" onclick="create_new_donate()">
+          <span class="glyphicon glyphicon-plus"></span> Doação  
+        </a>
+    </center>
+
 </section>
 
+<script>
+  function show_top_donations() {
+        window.location.href = 'top_donations';
+  }
+</script>
