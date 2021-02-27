@@ -72,10 +72,11 @@ body {
 
 .welcome_labels {
     transition: 0.5s;
-    height:20px;
+    font-size: 20px;
+    height: 30px;
     border-radius: 20px;
 }
 
 .welcome_labels:hover {
-    height:100px;
+    height:150px;
 }
