@@ -1,0 +1,29 @@
+
+  <section class="section container">
+    <div class="container_label_top_donations">
+        <center><h1>Lista de top doações</h1></center><br>
+        
+        <div class="level-right">
+            <a href="/" class="btn btn-danger">Voltar</a>
+        </div>
+    </div> 
+
+    <table class="table" style="margin-top: 20px;">
+        <thead>
+        <tr>
+            <th>Responsável</th>
+            <th>Atuação</th>
+            <th>Valores</th>
+        </tr>
+        </thead>
+        {{#each donations}}
+            <tbody>    
+                <tr class="table-info">
+                    <td>{{this.responsible}}</td>
+                    <td>{{this.sector}}</td>
+                    <td>{{this.values}}</td>
+                </tr>
+            </tbody>
+        {{/each}}
+    </table>
+  </section>
