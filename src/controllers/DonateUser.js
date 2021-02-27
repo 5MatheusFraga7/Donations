@@ -17,7 +17,6 @@ module.exports = async function (request, response) {
          .update({
             values: q
         })       
-        
         return response.render('donate', { donate: u, donations, q})
 
 }

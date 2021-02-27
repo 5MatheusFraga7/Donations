@@ -18,6 +18,7 @@ body {
     border-radius: 20px;
     transition: 0.5s;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .container_donations:hover {
@@ -67,4 +68,14 @@ body {
     position: absolute;
     bottom: 0%;
     width: 100%;
+}
+
+.welcome_labels {
+    transition: 0.5s;
+    height:20px;
+    border-radius: 20px;
+}
+
+.welcome_labels:hover {
+    height:100px;
 }
